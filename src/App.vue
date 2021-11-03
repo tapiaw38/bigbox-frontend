@@ -14,9 +14,8 @@ export default {
 
 <style lang="scss">
 #app {
-  font-family: Quicksand;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Sofia Pro W01, sans-serif !important;
+  color: #464646;
   text-align: center;
 }
 body {
