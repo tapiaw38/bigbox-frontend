@@ -42,5 +42,13 @@ export default {};
   .card-image {
     width: 100%;
   }
+  .card-title {
+    margin-top: 5%;
+    margin-right: 2%;
+  }
+  .card-pointer {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
 }
 </style>
