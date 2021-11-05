@@ -1,26 +1,31 @@
 <template>
   <div class="container">
-    <div class="card-group">
+    <div class="card-group" v-if="activities.length !== 0">
       <!-- card componnet -->
-      <card
-        v-for="{ id, title, activity, points, participants } in activities"
-        :key="id"
-      >
+      <card v-for="{ id, title, activity, points } in activities" :key="id">
         <template v-slot:card-image>
-          <div class="content-image">
-            <img :src="JSON.parse(activity).image[0]" alt="" />
-          </div>
+          <router-link
+            :to="{
+              name: 'detail',
+              params: { id: id, allActivities: activities },
+            }"
+          >
+            <div class="content-image">
+              <img :src="JSON.parse(activity).image[0]" alt="" />
+            </div>
+          </router-link>
         </template>
 
         <template v-slot:card-title>
           <div class="content-middle">
             <h1>{{ title }}</h1>
-            <template v-if="participants === 1">
-              <icon class="icon-peron" name="person" />
-            </template>
-            <template v-else-if="participants === 2">
-              <icon class="icon-person" name="persons" />
-            </template>
+
+            <icon
+              v-if="JSON.parse(activity).participants === 1"
+              class="icon-person"
+              name="person"
+            />
+            <icon v-else class="icon-person" name="persons" />
           </div>
         </template>
 
@@ -44,7 +49,9 @@
         </template>
       </card>
     </div>
-
+    <div v-else class="loader-content">
+      <div class="loader"></div>
+    </div>
     <!-- Pagination -->
     <Pagination
       :page="page"
@@ -66,10 +73,9 @@ import Pagination from "@/components/Pagination.vue";
 // api
 import bigboxApi from "../api/bigboxApi";
 // parser links
-var parse = require("parse-link-header");
+let parse = require("parse-link-header");
 //icons
 import Icon from "../components/icons/Icon.vue";
-
 export default {
   name: "Home",
   components: {
@@ -183,15 +189,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
-  margin-top: 5%;
-  margin-left: 13%;
-  margin-right: 13%;
-  @media (max-width: 850px) {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-}
 .card-group {
   @include grid(3);
   gap: 1em;
@@ -242,6 +239,32 @@ export default {
   .icon-location {
     margin-left: 2%;
     margin-right: 1%;
+  }
+}
+
+.loader-content {
+  transform: translateY(30%);
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  margin: 0 auto;
+  width: 100vh;
+  height: 100vh;
+}
+.loader {
+  border: 16px solid $secondary; /* Light grey */
+  border-top: 16px solid $primary; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 </style>

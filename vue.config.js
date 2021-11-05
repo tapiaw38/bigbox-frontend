@@ -4,7 +4,7 @@ module.exports = {
         loaderOptions: {
             sass: {
                 prependData: `@import "~@/assets/sass/_shared.scss";`
-            }
+            },
         }
     }
 }

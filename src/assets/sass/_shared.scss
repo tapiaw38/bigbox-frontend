@@ -4,11 +4,19 @@ $white: #ffffff;
 $black: #000;
 $primary: #ff6c5e;
 $secondary: #ddd;
+$gray: #4f4f4f;
 
 /*mixin*/
 @mixin grid($columns) {
   display: grid;
   grid-template-columns: repeat($columns, 1fr);
-
   gap: 5px;
+}
+
+@mixin title {
+  margin-top: 0.4em;
+  font-size: 1.1em;
+  text-align: center;
+  vertical-align: baseline;
+  color: $black;
 }

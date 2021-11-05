@@ -31,6 +31,7 @@ export default {};
 <style lang="scss" scoped>
 .card {
   width: 100%;
+  min-width: 250px;
   border-radius: 0.25rem;
   margin: 5%;
   &:hover {

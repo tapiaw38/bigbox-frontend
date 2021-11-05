@@ -97,6 +97,93 @@
         fill="#FF6C5E"
       />
     </svg>
+    <svg
+      v-if="name === 'arrow-left'"
+      width="18px"
+      height="20px"
+      viewBox="0 0 18 20"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+    >
+      <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+      <title>ic_back</title>
+      <desc>Created with Sketch.</desc>
+      <defs></defs>
+      <g
+        id="Icons"
+        stroke="none"
+        stroke-width="1"
+        fill="none"
+        fill-rule="evenodd"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <g
+          id="24-px-Icons"
+          transform="translate(-219.000000, -26.000000)"
+          stroke="#000000"
+        >
+          <g id="ic_back" transform="translate(216.000000, 24.000000)">
+            <g
+              transform="translate(12.000000, 12.000000) scale(-1, 1) translate(-12.000000, -12.000000) "
+              id="forward"
+            >
+              <g transform="translate(4.000000, 3.000000)" stroke-width="2">
+                <path d="M0,9 L16,9" id="Line"></path>
+                <path d="M16,9 L7.93774223,0.937742233" id="Line"></path>
+                <path d="M16,9 L7.93774223,17.0622578" id="Line"></path>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+
+    <svg
+      v-if="name === 'rules'"
+      version="1.1"
+      id="Capa_1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      width="30px"
+      height="25px"
+      viewBox="0 0 792 792"
+      style="enable-background: new 0 0 792 792"
+      xml:space="preserve"
+    >
+      <g>
+        <g>
+          <rect x="216" y="432" width="360" height="36" />
+          <rect x="216" y="540" width="360" height="36" />
+          <rect x="216" y="108" width="216" height="36" />
+          <rect x="216" y="648" width="360" height="36" />
+          <rect x="216" y="324" width="360" height="36" />
+          <path
+            d="M666.54,792c0,0,17.46,0,17.46-17.604V158.4L526.896,0H125.46c0,0-17.46,0-17.46,17.604V774.36
+			C108,792,125.46,792,125.46,792H666.54z M144,36h360v108c0,36,36,36,36,36h108v576H144V36z"
+          />
+          <rect x="216" y="216" width="360" height="36" />
+        </g>
+      </g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+    </svg>
   </div>
 </template>
 

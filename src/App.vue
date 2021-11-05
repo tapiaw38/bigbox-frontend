@@ -21,4 +21,13 @@ export default {
 body {
   background-color: $white;
 }
+.container {
+  margin-top: 3%;
+  margin-left: 13%;
+  margin-right: 13%;
+  @media (max-width: 850px) {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
 </style>
