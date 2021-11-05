@@ -9,9 +9,10 @@ COPY . /app
 RUN yarn build
 
 # production environment
-FROM steebchen/nginx-spa
-WORKDIR /app
-COPY --from=build /app/dist ./
+FROM nginx:1.16.0-alpine
+COPY --from=build /app/dist /usr/share/nginx/html
+RUN rm /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/conf.d
 
 EXPOSE 80
-CMD ["nginx"]
+CMD ["nginx", "-g", "daemon off"]
