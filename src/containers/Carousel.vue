@@ -179,11 +179,11 @@ h1 {
 img {
   width: 100%;
   object-fit: cover;
-  height: max(2rem, 20vh);
+  height: max(20vh);
 }
 .content-image {
   background-color: #f5f5f5;
-  height: max(2rem, 20vh);
+  height: max(20vh);
 }
 .pointer {
   margin-left: 2%;
