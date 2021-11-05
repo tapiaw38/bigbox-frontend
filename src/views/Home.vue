@@ -210,12 +210,12 @@ export default {
   img {
     width: 100%;
     object-fit: cover;
-    height: max(2rem, 30vh);
+    height: max(30vh);
   }
 }
 .content-image {
   background-color: #f5f5f5;
-  height: max(2rem, 30vh);
+  height: max(30vh);
 }
 .pointer {
   margin-left: 2%;
