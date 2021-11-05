@@ -75,7 +75,6 @@
 import bigboxApi from "../api/bigboxApi";
 //icons
 import Icon from "../components/icons/Icon.vue";
-//componentes
 
 export default {
   name: "detail",
@@ -98,15 +97,6 @@ export default {
     return {
       data: {},
       activity: [],
-      settingsCarousel: {
-        dots: true,
-        focusOnSelect: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        touchThreshold: 5,
-      },
     };
   },
   methods: {
